@@ -374,12 +374,14 @@ export default class OrganizationDiscover extends React.Component {
               />
             )}
             {!shouldDisplayResult && (
-              <div>
-                <HeadingContainer>
-                  <Heading>{t('Discover')}</Heading>
-                </HeadingContainer>
+              <React.Fragment>
+                <div>
+                  <HeadingContainer>
+                    <Heading>{t('Discover')}</Heading>
+                  </HeadingContainer>
+                </div>
                 <Intro updateQuery={this.updateFields} />
-              </div>
+              </React.Fragment>
             )}
             {isFetchingQuery && <ResultLoading />}
             <EarlyAdopterMessage />
